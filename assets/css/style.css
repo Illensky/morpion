@@ -1,0 +1,17 @@
+#morpion {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.case {
+    width: 30%;
+    height: 33%;
+    border: 5px solid black;
+}
+
+.case:hover {
+    cursor: pointer;
+}
