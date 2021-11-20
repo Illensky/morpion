@@ -1,17 +1,112 @@
+body {
+    text-align: center;
+    font-family: 'Langar', cursive;
+    background: url("/assets/img/background.jpg");
+}
+
 #morpion {
     width: 320px;
     height: 320px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 160%;
+    font-weight: bold;
+    background: white;
+    width: 15%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+button {
+    width: 15%;
+    font-size: 160%;
+    font-weight: bold;
+    border-radius: 100%;
 }
 
 .case {
     width: 30%;
     height: 33%;
     border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 550%;
+}
+
+#retryContainer, #winCounter, #win {
+    padding: 10px;
+    display: none;
+}
+
+#winCounter {
+    font-size: 120%;
+    font-weight: bold;
+    background: white;
+    width: 30%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#win {
+    font-size: 120%;
+    font-weight: bold;
+    background: white;
+    width: 30%;
+    margin: auto;
+    border-radius: 100%;
 }
 
 .case:hover {
     cursor: pointer;
+}
+
+#leftTop {
+    border-top: none;
+    border-left: none;
+}
+
+#middleTop {
+    border-top: none;
+    border-left: none;
+}
+
+#rightTop {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#leftMiddle {
+    border: none;
+}
+
+#middleMiddle {
+    border-top: none;
+    border-bottom: none;
+}
+
+#rightMiddle {
+    border: none;
+}
+
+#leftBottom {
+    border-left: none;
+    border-bottom: none;
+}
+
+#middleBottom {
+    border-bottom: none;
+    border-left: none;
+}
+
+#rightBottom {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
 }
