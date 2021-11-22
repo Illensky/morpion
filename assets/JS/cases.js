@@ -122,6 +122,21 @@ document.addEventListener("contextmenu", function (event) {
 });
 
 
+/* Function to make the computer playing instead of the X player*/
+
+function computer () {
+    let caseToPlay = Math.floor(Math.random()*8)
+    if (cases[caseToPlay].innerHTML === "" && gameOver === 0){
+        cases[caseToPlay].innerHTML = "X"
+        lastPlayerIsO = 0;
+        lastPlayerIsX = 1;
+    }
+    else if (cases[caseToPlay].innerHTML !== "" && gameOver === 0) {
+        computer();
+    }
+}
+
+
 /* add an event listener to the retry button to make it star again the game*/
 
 retryButton.addEventListener('click', function (){
@@ -159,6 +174,10 @@ for (let i = 0 ; i < cases.length ; i++ ) {
             lastPlayerIsX = 0;
             hitCount++;
             equality();
+            let choice = document.getElementById("playerOrPC")
+            if ( choice.selectedIndex === 1) {
+                computer();
+            }
         }
     });
 }
