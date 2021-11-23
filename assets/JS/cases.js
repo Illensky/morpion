@@ -130,6 +130,7 @@ function computer () {
         cases[caseToPlay].innerHTML = "X"
         lastPlayerIsO = 0;
         lastPlayerIsX = 1;
+        hitCount++;
     }
     else if (cases[caseToPlay].innerHTML !== "" && gameOver === 0) {
         computer();
@@ -177,6 +178,8 @@ for (let i = 0 ; i < cases.length ; i++ ) {
             let choice = document.getElementById("playerOrPC")
             if ( choice.selectedIndex === 1) {
                 computer();
+                equality();
+                checkWinner();
             }
         }
     });
